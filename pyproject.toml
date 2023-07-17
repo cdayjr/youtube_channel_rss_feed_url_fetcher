@@ -1,0 +1,30 @@
+[project]
+name = "youtube_channel_rss_feed_url_fetcher"
+dynamic = ["version"]
+description = "Fetch the YouTube RSS feed URL for a channel"
+authors = [
+    {name = "Chad Wade Day, Jr.", email = "cdayjr@chadwadedayjr.info"},
+]
+dependencies = [
+    "requests>=2.31.0",
+    "pylama[all]>=8.4.1",
+    "autopep8>=2.0.2",
+    "types-requests>=2.31.0.1",
+    "pdm-backend>=2.1.4",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+license = {text = "Unlicense"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[tool.pdm.scripts]
+fetch = "src/youtube_channel_rss_feed_url_fetcher/__init__.py"
+
+[tool.pdm.version]
+source = "scm"
+
+[tool.mypy]
+strict = true
